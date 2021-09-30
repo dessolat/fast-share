@@ -6,18 +6,28 @@
 
 body {
   background-color: #e9f1ef;
+	font-family: monospace;
+	font-size: 1rem;
+}
+
+textarea {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: inherit;
+	resize: none;
+	width: 100%;
+	min-height: calc(100vh - 2rem);
 }
 
 .wrapper {
   display: flex;
   padding: 1rem 1rem;
-  font-size: 1rem;
 }
 
 .line-numbers {
 	padding: 0 1rem 0 0;
 	color: rgb(4, 173, 252);
-	font-family: monospace;
 	text-align: end;
 }
 
