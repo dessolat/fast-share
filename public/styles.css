@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9f1ef;
+}
+
+.wrapper {
+  display: flex;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+}
+
+.line-numbers {
+	padding: 0 1rem 0 0;
+	color: rgb(4, 173, 252);
+	font-family: monospace;
+	text-align: end;
+}
+
+#code-display {
+  padding: 0;
+}
