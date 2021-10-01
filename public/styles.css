@@ -6,18 +6,22 @@
 
 body {
   background-color: #e9f1ef;
-	font-family: monospace;
-	font-size: 1rem;
+  font-family: monospace;
+  font-size: 1rem;
 }
 
 textarea {
-	background-color: transparent;
-	border: none;
-	outline: none;
-	font-size: inherit;
-	resize: none;
-	width: 100%;
-	min-height: calc(100vh - 2rem);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+  resize: none;
+  width: 100%;
+  min-height: calc(100vh - 2rem);
+}
+
+button {
+  cursor: pointer;
 }
 
 .wrapper {
@@ -26,9 +30,70 @@ textarea {
 }
 
 .line-numbers {
-	padding: 0 1rem 0 0;
-	color: rgb(4, 173, 252);
-	text-align: end;
+  padding: 0 1rem 0 0;
+  color: rgb(4, 173, 252);
+  text-align: end;
+}
+
+.buttons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background-color: #bff0e3;
+  padding: 10px;
+  border-radius: 3px;
+  opacity: 0.3;
+  transition: opacity 0.4s ease;
+}
+
+.buttons:hover {
+  opacity: 1;
+}
+
+.buttons__header {
+  font-size: 24px;
+  line-height: 24px;
+  text-decoration: none;
+  transition: color 0.4s;
+}
+.buttons__header:hover {
+  color: white;
+}
+.buttons__header > span {
+  font-style: italic;
+  color: rgb(143, 204, 224);
+  transition: color 0.4s;
+}
+.buttons__header:hover > span {
+  color: white;
+}
+
+.buttons__items {
+  font-size: 0;
+  padding-top: 10px;
+}
+
+.buttons__items > * + * {
+	margin-left: 5px;
+}
+
+.btn {
+  width: 35px;
+  height: 28px;
+  border: none;
+}
+
+.new-btn {
+	background: url('./images/new.png') center/cover;
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+}
+
+.save-btn {
+  background: url('./images/save.png') center/cover;
 }
 
 #code-display {
