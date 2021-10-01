@@ -1,9 +1,11 @@
 const { Router } = require('express');
-const controller = require('../controllers/controller')
-const route = new Router()
+const controller = require('../controllers/controller');
+const route = new Router();
 
 route.get('/', controller.welcomePage);
 
 route.get('/new', controller.newPage);
 
-module.exports = route
+route.post('/save', controller.savePage);
+
+module.exports = route;

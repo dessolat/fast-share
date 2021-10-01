@@ -6,6 +6,7 @@ const route = require('./routes/routes')
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({extended: true}))
 app.use('/', route)
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
