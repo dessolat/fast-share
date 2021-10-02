@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
   background-color: #e9f1ef;
   font-family: monospace;
@@ -108,4 +112,10 @@ button {
 
 #code-display {
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		font-size: 12px;
+	}
 }
