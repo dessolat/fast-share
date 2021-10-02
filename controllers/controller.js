@@ -13,10 +13,22 @@ class Controller {
     res.render('new', { value: '' });
   }
 
+  async duplicatePage(req, res) {
+    try {
+			const id = req.params.id
+      const document = await Document.findById(id);
+			console.log(id, document.value)
+      res.render('new', { value: document.value });
+    } catch (error) {
+      res.redirect(`/${id}`);
+    }
+  }
+
   async getPageId(req, res) {
     try {
-      const document = await Document.findById(req.params.id);
-      res.render('code-display', { code: document.value });
+			const id = req.params.id
+      const document = await Document.findById(id);
+      res.render('code-display', { code: document.value, id });
     } catch (error) {
       res.redirect('/');
     }

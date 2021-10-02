@@ -1,7 +1,11 @@
-<div class='buttons'>
-	<a class="buttons__header" href="/"><span>Fast</span>-share</a>
-	<div class="buttons__items">
-		<a href="/new" class="new-btn btn"></a>
-		<button class="save-btn btn" type="submit"></button>
-	</div>
+<div class="buttons">
+  <a class="buttons__header" href="/"><span>Fast</span>-share</a>
+  <div class="buttons__items">
+    <a href="/new" class="new-btn btn"></a>
+    <% if (locals.canSave) { %>
+    	<button class="save-btn btn" type="submit"></button>
+    <% } %> <% if (locals.id) { %>
+    	<a class="duplicate-btn btn" href="/<%= locals.id %>/duplicate"></a>
+    <% } %>
+  </div>
 </div>

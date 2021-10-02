@@ -9,10 +9,10 @@
   </head>
   <body>
     <form action="/save" method="post">
-			<%- include('__buttons') %> 
+			<%- include('__buttons', {canSave: true}) %> 
       <div class="wrapper">
         <div class="line-numbers">&gt;</div>
-        <textarea autofocus name="value"><% value %> </textarea>
+        <textarea autofocus name="value"><%= value %> </textarea>
       </div>
     </form>
     <script>

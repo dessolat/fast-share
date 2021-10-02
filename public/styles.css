@@ -83,6 +83,11 @@ button {
   width: 35px;
   height: 28px;
   border: none;
+	transition: transform .2s;
+}
+
+.btn:hover {
+	transform: translateY(3px);
 }
 
 .new-btn {
@@ -93,7 +98,12 @@ button {
 }
 
 .save-btn {
-  background: url('./images/save.png') center/cover;
+	background: url('./images/save.png') center/cover;
+}
+
+.duplicate-btn {
+	background: url('./images/duplicate.png') center/cover;
+	display: inline-block;
 }
 
 #code-display {
